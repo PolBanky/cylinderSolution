@@ -1,0 +1,58 @@
+﻿static double DegToRadFactor = Math.PI/180;
+static double PI_divided_FOUR = Math.PI/4;		// = 0,78539816339744830961566084581988
+
+Расчет трубопроводов
+/******************/
+ --линия всасывания 0,5–1,5 м/сек
+ т.к. трубы линий напора и возврата всегда одинаковые напор почти равен возврату ==>
+ --линии напора и возврата 3-5 м/сек  (2000-5000 мм/сек)
+ (вообще-то -- линия напора   3–10 м/сек, линия возврата 2-5 м/сек)
+
+
+/******************/
+txtBox6_TextChanged() - ВВОД ПОДАЧИ НАСОСА ЗА ОБОРОТ (см.куб/revolution)
+txtBox7_TextChanged() - ВВОД ЧИСЛА ОБОРОТОВ НАСОСА ЗА МИНУТУ (revolution/minute)
+	Расчет подачи насоса
+(sm.kub/minute) = (sm.kub/revolution) * (revolution/minute);  (1000 sm.kub = 1 litr)
+smCubPerMinute = (smCubPerRev * revPerMinute);
+litrPerMinute = (smCubPerRev * revPerMinute) / 1000; // подача показывается в litrPerMinute
+mmCubPerSec = smCubPerMinute * 1000 / 60 = smCubPerMinute * 100 / 6;
+mmCubPerSec = litrPerMinute * 1000 000 / 60 = litrPerMinute * 1000 00 / 6;
+
+скорость движения жидкости равна подаче деленной на площадь трубы
+(Расчет площади трубы  (S=(PI*D^2)/4;  areaHoseMmKvdr = diametrHoseMm^2 * 0,7854;)
+
+fluidMmPerSec = mmCubPerSec / areaHoseMmKvdr; // расчет скорости жидкости
+теперь из максимальной скорости получаем площадь трубы, для напора это 5000 мм/сек
+areaHoseMmKvdr = mmCubPerSec / 5000;
+
+areaHoseMmKvdr = diametrHoseMm^2 * 0,7854;
+diametrHoseMm^2 = areaHose / 0,7854;
+diametrHoseMm = Math.Sqrt(areaHoseMmKvdr / 0,7854);
+
+
+
+
+
+
+
+
+
+/******************/
+Вариант 1
+Через трубу идет расход жидкости - Q (л/мин)
+
+
+
+
+/******************/
+( Вариант 2
+Скорость течения  V = (Q * 100) / (6 * D^2 * 0,785);   //  (PI/4) = 0,785
+где - 
+V - скорость течения, м/с = (мм/с * 1000)
+Q - расход масла, л/мин = (л/сек / 60)
+D - диаметр трубы, мм
+S - площадь трубы, мм^2   S=(PI*D^2)/4 = D^2 * 0,785;
+
+Через площадь S за секунду проходит V метров жидкости ==> объем q = S * V )
+

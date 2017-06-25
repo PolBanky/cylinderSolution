@@ -1,0 +1,91 @@
+﻿// PART - twist load
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace wf472
+{
+
+    public partial class Form1 : Form
+    {
+        // DATA!!!
+        double diametrTwist_dbl, momentOfForceTwist_dbl, areaTwist_dbl, stressTwist_dbl, momentOfInertia_dbl, momentOfResistance_dbl;
+        string diametrTwist_str, momentOfForceTwist_str, areaTwist_str, stressTwist_str, momentOfInertia_str, momentOfResistance_str;
+
+        // завершение DATA!!!     
+
+
+        // ввод наружного диаметра (кручение) и расчет площади сечения стержня 
+        // и полярных моментов инерции и сопротивления
+        void txtBox3()
+        {
+            diametrTwist_str = textBox3.Text;
+            if (diametrTwist_str.Length == 0) // если длина строки == 0
+                diametrTwist_dbl = 0;
+            else {
+                try { diametrTwist_dbl = Convert.ToDouble(diametrTwist_str); }
+                catch {
+                    MessageBox.Show("Недопустимый ввод", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox3.Text = "";
+                    diametrTwist_dbl = 0;
+                    momentOfInertia_dbl = 0;
+                    momentOfResistance_dbl = 0;
+                }  // завершение try...catch
+            }      // завершение if...else            
+            // Расчет площади сечения стержня
+            areaTwist_dbl = diametrTwist_dbl * diametrTwist_dbl * 0.7853981625;   // 3.14159265 / 4 = 0.7853981625 
+            areaTwist_str = dblToCutString(areaTwist_dbl) + " мм.кв.";
+            label14.Text = areaTwist_str;
+            // Расчет полярного момента инерции сечения стержня Jp=(Pi*D^4)/32 (мм^4)
+            momentOfInertia_dbl = (Math.PI * Math.Pow(diametrTwist_dbl, 4))/32;
+            momentOfInertia_str = dblToCutString(momentOfInertia_dbl) + " мм^4";
+            label15.Text = momentOfInertia_str;
+            // Расчет полярного момента сопротивления сечения стержня Jp=(Pi*D^3)/16 (мм^3)
+            momentOfResistance_dbl = (Math.PI * Math.Pow(diametrTwist_dbl, 3)) / 16;
+            momentOfResistance_str = dblToCutString(momentOfResistance_dbl) + " мм^3";
+            label18.Text = momentOfResistance_str;
+            // Расчет напряжения в сечении 
+        }   // завершение txtBox3() 
+
+
+        // внутренний диаметр (кручение)
+        void txtBox4()
+        {
+            
+        }   // завершение txtBox4() 
+
+
+        // ввод крутящего момента (панель Twist) и расчет напряжения в стержне        
+        void txtBox5()
+        {
+            momentOfForceTwist_str = textBox5.Text;
+            if (diametrTwist_str.Length == 0)   // если длина строки == 0
+                momentOfForceTwist_dbl = 0;
+            else {
+                try { momentOfForceTwist_dbl = Convert.ToDouble(momentOfForceTwist_str); }
+                catch {
+                    MessageBox.Show("Недопустимый ввод", "Warning!",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox5.Text = "";
+                    momentOfForceTwist_dbl = 0;
+                }  // завершение try...catch
+            }      // завершение if...else            
+            // Расчет напряжения в сечении стержня 
+// КАСАТЕЛЬНОЕ НАПРЯЖЕНИЕ (МПа) = КРУТЯЩИЙ МОМЕНТ (Н*ММ) / ПОЛЯРНЫЙ МОМЕНТ СОПРОТИВЛЕНИЯ (мм^3)           
+            if (momentOfResistance_dbl == 0)
+            {   stressTwist_dbl = 0;
+                stressTwist_str = "Sorry, no value"; }
+            else {
+                stressTwist_dbl = (momentOfForceTwist_dbl * 1000) / momentOfResistance_dbl;
+                stressTwist_str = dblToCutString(stressTwist_dbl) + " МПа";
+            }
+            label23.Text = stressTwist_str;  
+
+        }   // завершение txtBox5() 
+   
+        
+    
+    }   // завершениие class Form1 : Form()
+}       // завершение namespace wf471

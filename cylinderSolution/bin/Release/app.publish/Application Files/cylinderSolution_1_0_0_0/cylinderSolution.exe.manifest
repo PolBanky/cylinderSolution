@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="cylinderSolution.exe" version="1.0.0.0" publicKeyToken="415def652914a07f" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="FDFFile_8.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="cylinderSolution" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="cylinderSolution.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--Параметры манифеста UAC
+             Если вы хотите изменить уровень контроля учетных записей, замените узел 
+             requestedExecutionLevel на один из следующих.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            При указании элемента requestedExecutionLevel будет отключена виртуализация файлов и реестра. 
+            Удалите этот элемент, если виртуализация требуется приложению для обратной
+            совместимости.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="cylinderSolution.exe" size="637360">
+      <assemblyIdentity name="cylinderSolution" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>05Ph7jp1cXI3A/K4CxzrUPEFPds=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="FDFFile_8.ico" size="295606">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GFdBnv59vNIAwkMamwZtzLQUQJ4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Kaments.txt" size="92">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pbiUYHmP8bpuVjkHcqZnakAKaRw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="РАСЧЕТЫ.txt" size="2574">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>v+hP4qmL/c9m5XeIzW6SgcrepAE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Список версий Windows, на которых это приложение было протестировано
+ и будет           работать. Раскомментируйте соответствующие элементы, чтобы ОС Windows 
+           автоматически выбрала наиболее совместимую среду. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DESKTOP-POL-BAN\Pol" issuerKeyHash="3bbaa6e058d6e62a247e12350839ef3af483addb" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Nsm208UUIPnRJtfDvzW8B4FdzKM=</DigestValue></Reference></SignedInfo><SignatureValue>SLbxallSD6Ke0/CcEfB7hgqGdvRABiLt/9h6p9YaxSpG7sWdoIlLG/QkHTg3k261ooGHrLG8E3aIFR5BfKWaTCmv5TMhMAnXfA0czOj0j+jPAzxOQ1KiKkqoTFSuJeej0sPII2ggui2BhJR5NPOKTnHi3i/sNAftpMQUJpQFFJ4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>06InDwii1YwKYRA5zRPj8OmwqaxHKrBGLXhxucyQQUQWgV+LlMhSaptXQakrQ4kGooA0/4SdKiLXPp+ine4jT2ZxoklyufBENBdLTN17ZyPiqZG0TJHv6xEbJggSwmflx+R0aOUjVQWGBF+Ubn/kOFMrc0jvpFdTSct13X07ut8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="a3cc5d8107bc35bfc3d726d1f92014c5d3b6c936" Description="" Url=""><as:assemblyIdentity name="cylinderSolution.exe" version="1.0.0.0" publicKeyToken="415def652914a07f" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-POL-BAN\Pol</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>BqzYGopzRXzLqtU0Sa1h+94K2ds=</DigestValue></Reference></SignedInfo><SignatureValue>rKmOgT9BHa99AeP3+m24kAqj+877ZEMeHsB3z70WH0/dwRudPmuBRd3hXdELUZSNfDDbN2P4TOya2pkFRJ56Dujxi8/Odfgc2eZmW4mFxNLd+DUi64TJ4fkh18TDaeYbF9lO3bFNXNaaAxeI6LSfJjs5wtW3+LB3lIvZK96P1+c=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>06InDwii1YwKYRA5zRPj8OmwqaxHKrBGLXhxucyQQUQWgV+LlMhSaptXQakrQ4kGooA0/4SdKiLXPp+ine4jT2ZxoklyufBENBdLTN17ZyPiqZG0TJHv6xEbJggSwmflx+R0aOUjVQWGBF+Ubn/kOFMrc0jvpFdTSct13X07ut8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQe+o2BLZb7JNJJ1nOfiw2QTANBgkqhkiG9w0BAQUFADAxMS8wLQYDVQQDHiYARABFAFMASwBUAE8AUAAtAFAATwBMAC0AQgBBAE4AXABQAG8AbDAeFw0xNTEwMDkyMDE0MDBaFw0xNjEwMDkwMjE0MDBaMDExLzAtBgNVBAMeJgBEAEUAUwBLAFQATwBQAC0AUABPAEwALQBCAEEATgBcAFAAbwBsMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDToicPCKLVjAphEDnNE+Pw6bCprEcqsEYteHG5zJBBRBaBX4uUyFJqm1dBqStDiQaigDT/hJ0qItc+n6Kd7iNPZnGiSXK58EQ0F0tM3XtnI+KpkbRMke/rERsmCBLCZ+XH5HRo5SNVBYYEX5Ruf+Q4UytzSO+kV1NJy3XdfTu63wIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAIN7/ArLfvJ/e4jimpY/fxQ76F699FK21Ak4OygZF7Fw+VDYUJ15CBlfBxNqaJ4cqD+EzUD6GoRYoBT2wzhN7DbBe9n8WDlSEqk8CPt3CsUKU8lcli5VtoXgYwLt/wKcCERY3E3F+mMRyXz5JXbbcsoT9yF9ZPOYG33chB/08zyE</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,150 @@
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_01\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_01\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_01\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_01\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_01\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_02\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_02\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_02\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_02\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_02\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_03\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_03\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_03\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_03\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_03\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_04\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_04\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_04\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_04\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_04\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_04\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_04\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_04\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_05\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_05\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_05\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_05\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_05\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_06\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_06\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_06\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_06\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_06\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_08\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_08\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_08\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_08\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_08\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_08\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_08\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_08\cylinderSolution\obj\Release\GenerateResource.read.1.tlog
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_08\cylinderSolution\obj\Release\GenerateResource.write.1.tlog
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\GenerateResource.read.1.tlog
+D:\_EDUCATION_\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\GenerateResource.write.1.tlog
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\GenerateResource.read.1.tlog
+D:\!!!__EDUCATION__!!!\C#\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\GenerateResource.write.1.tlog
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\GenerateResource.read.1.tlog
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\GenerateResource.write.1.tlog
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.exe
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.pdb
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\ResolveAssemblyReference.cache
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\GenerateResource.read.1.tlog
+D:\!!!__EDUCATION__!!!\Csh\MyProjects\!!!__NOT ACTUAL RIGHT NOW\cylinderSolution_083\cylinderSolution\obj\Release\GenerateResource.write.1.tlog
+C:\Users\PC-T1\OneDrive\Docs\Csh\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.exe
+C:\Users\PC-T1\OneDrive\Docs\Csh\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.pdb
+F:\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.exe
+F:\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.pdb
+F:\MyProjects\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.exe
+F:\MyProjects\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.pdb
+F:\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.csprojResolveAssemblyReference.cache
+F:\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Form1.resources
+F:\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.Properties.Resources.resources
+F:\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.csproj.GenerateResource.Cache
+F:\MyProjects\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.exe.manifest
+F:\MyProjects\cylinderSolution_083\cylinderSolution\bin\Release\cylinderSolution.application
+F:\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.TrustInfo.xml
+F:\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.exe.manifest
+F:\MyProjects\cylinderSolution_083\cylinderSolution\obj\Release\cylinderSolution.application

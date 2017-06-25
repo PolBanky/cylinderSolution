@@ -1,0 +1,514 @@
+﻿// Ввод только цифр и десятичного разделителя
+// Срабатывание только BackSpace
+// запрещение перемещения курсора по строке символов с клавы
+// перемещение курсора в конец текста при щелчке мышью
+// площадь и напряжение выводятся максимум с двумя знаками после запятой
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+
+namespace wf472
+{
+
+//(0)Stretch - растяжение//(1)Bend - изгиб//(2)Twist - кручение//(3)Cut - срез//(4)Crush - смятие
+    public enum panel { Stretch, Bend, Twist, Cut, Crush };
+
+// (0)static - статическая // (1)pulsate - от нуля до мах. // (2)alternate - знакопеременная
+    public enum load { Static, Pulsate, Alternate };
+
+    // определение структуры
+    struct Steel
+    {
+        public string steelName;                	// Марка стали
+        public double ultimate_Strength;        	// Временное сопротивление
+        public double yield_Strength;           	// Предел текучести
+        public double static_Stretch_Stress_Max;// Доп.напр.при стат нагрузке Stretch-растяжение
+        public double pulsate_Stretch_Stress_Max;  	// Доп. напр. при пульсирующей нагрузке
+        public double alternate_Stretch_Stress_Max; // Доп. напр. при знакопеременной нагрузке
+        public double static_Bend_Stress_Max;   // Доп напр при стат нагрузке	Bend - изгиб
+        public double pulsate_Bend_Stress_Max;  	// Доп. напр. при пульсирующей нагрузке
+        public double alternate_Bend_Stress_Max; 	// Доп. напр. при знакопеременной нагрузке
+        public double static_Twist_Stress_Max;  // Доп.напр.при стат нагрузке Twist - кручение
+        public double pulsate_Twist_Stress_Max;  	// Доп. напр. при пульсирующей нагрузке
+        public double alternate_Twist_Stress_Max;   // Доп. напр. при знакопеременной нагрузке
+        public double static_Cut_Stress_Max;   	// Доп.напр.при стат нагрузке Cut - срез
+        public double pulsate_Cut_Stress_Max;  		// Доп. напр. при пульсирующей нагрузке
+        public double alternate_Cut_Stress_Max; 	// Доп. напр. при знакопеременной нагрузке
+        public double static_Crush_Stress_Max;  // Доп.напр. при стат нагрузке Crush - смятие
+        public double pulsate_Crush_Stress_Max;  	// Доп. напр. при пульсирующей нагрузке
+
+        // конструктор структуры
+        public Steel(string a1, double a2, double a3, double b1, double b2, double b3, double c1, double c2, double c3, double d1, double d2, double d3, double e1, double e2, double e3, double f1, double f2)
+        {
+            steelName = a1;
+            ultimate_Strength = a2;     // Временное сопротивление
+            yield_Strength = a3;        // Предел текучести
+            static_Stretch_Stress_Max = b1;     // Stretch - растяжение
+            pulsate_Stretch_Stress_Max = b2;
+            alternate_Stretch_Stress_Max = b3;
+            static_Bend_Stress_Max = c1;        // Bend - изгиб
+            pulsate_Bend_Stress_Max = c2;
+            alternate_Bend_Stress_Max = c3;
+            static_Twist_Stress_Max = d1;       // Twist - кручение
+            pulsate_Twist_Stress_Max = d2;
+            alternate_Twist_Stress_Max = d3;
+            static_Cut_Stress_Max = e1;         // Cut - срез
+            pulsate_Cut_Stress_Max = e2;
+            alternate_Cut_Stress_Max = e3;
+            static_Crush_Stress_Max = f1;       // Crush - смятие
+            pulsate_Crush_Stress_Max = f2;
+        }   // завершение конструктора структуры
+    }       // завершение определения структуры
+
+
+
+    //  CLASS  FORM1 : FORM  !!!
+    public partial class Form1 : Form
+    {
+        // DATA!!!
+        double diametrStretch_dbl, forceStretch_dbl, areaStretch_dbl, stressStretch_dbl;
+        string diametrStretch_str, forceStretch_str, areaStretch_str, stressStretch_str;
+        double diametrNeed_dbl, forceNeed_dbl, areaNeed_dbl;
+        string diametrNeed_str, forceNeed_str;
+
+        #region
+
+        Steel[] steels = new[]  // массив структур
+        {
+new Steel("сталь 3          ", 370, 245, 125,  90,  70, 150, 110,  85,  95,  65,  50,  75,  50,  40, 190, 135),
+new Steel("сталь 08 (Н)     ", 330, 200, 110,  80,  60, 130,  95,  75,  80,  60,  45,  60,  45,  35, 165, 120),
+new Steel("сталь 10 (Н)     ", 340, 210, 110,  80,  60, 145, 100,  75,  80,  60,  45,  65,  45,  35, 165, 120),
+new Steel("сталь 10 (Ц-В59) ", 400, 250, 130,  90,  70, 155, 115,  90, 100,  65,  55,  70,  50,  40, 195, 135),
+new Steel("сталь 15 (Н)     ", 380, 230, 125,  85,  65, 150, 110,  85,  95,  65,  50,  75,  50,  40, 185, 125),
+new Steel("сталь 15 (Ц-В59) ", 450, 250, 145,  95,  80, 175, 125, 100, 110,  80,  60,  85,  60,  45, 210, 175),
+new Steel("сталь 20 (Н)     ", 420, 250, 140, 115,  95, 170, 120,  95, 105,  70,  55,  85,  60,  45, 210, 175),
+new Steel("сталь 20 (Ц-В59) ", 500, 300, 165, 120, 100, 200, 140, 110, 125,  75,  55, 100,  60,  45, 240, 175),
+new Steel("сталь 25 (Н)     ", 460, 280, 150, 110,  85, 180, 130, 105, 110,  80,  60,  90,  65,  50, 220, 165),
+new Steel("сталь 25 (Ц-В58) ", 550, 350, 180, 130, 100, 210, 160, 125, 135,  95,  75, 110,  80,  60, 270, 195),
+new Steel("сталь 30 (Н)     ", 500, 300, 165, 115,  90, 200, 140, 110, 125,  90,  70, 100,  65,  55, 240, 175),
+new Steel("сталь 30 (У)     ", 600, 350, 200, 140, 105, 240, 175, 135, 150, 105,  80, 120,  85,  65, 300, 210),
+new Steel("сталь 35 (Н)     ", 540, 320, 180, 125,  95, 210, 155, 120, 135,  90,  70, 110,  75,  55, 270, 190),
+new Steel("сталь 35 (У)     ", 650, 380, 210, 150, 115, 260, 185, 145, 160, 110,  85, 130,  90,  70, 520, 220),
+new Steel("сталь 35 (В35)   ",1000, 650, 330, 230, 180, 400, 290, 220, 250, 165, 135, 200, 140, 110, 500, 350),
+new Steel("сталь 40 (Н)     ", 580, 340, 190, 130, 105, 230, 165, 130, 140, 100,  75, 115,  80,  60, 280, 200),
+new Steel("сталь 40 (У)     ", 700, 400, 230, 160, 125, 270, 200, 155, 170, 120,  95, 140, 100,  80, 320, 240),
+new Steel("сталь 40 (В35)   ",1000, 650, 340, 230, 180, 400, 290, 220, 250, 175, 135, 200, 140, 110, 500, 350),
+new Steel("сталь 45 (Н)     ", 610, 360, 200, 140, 110, 240, 175, 135, 150, 105,  80, 125,  85,  65, 300, 210),
+new Steel("сталь 45 (У)     ", 750, 450, 240, 170, 135, 290, 215, 170, 185, 130, 100, 145, 105,  80, 360, 260),
+new Steel("сталь 45 (М35)   ", 900, 650, 300, 210, 160, 360, 260, 200, 230, 165, 120, 185, 125,  95, 450, 310),
+new Steel("сталь 45 (В42)   ",1000, 700, 300, 210, 160, 360, 260, 200, 230, 160, 120, 185, 125,  95, 750, 310),
+new Steel("сталь 45 (В48)   ",1200, 950, 400, 280, 210, 480, 340, 270, 300, 210, 160, 240, 170, 130, 600, 420),
+new Steel("сталь 45 (ТВЧ56) ", 750, 450, 240, 170, 135, 290, 210, 170, 185, 130, 100, 145, 105,  80, 360, 260),
+new Steel("сталь 09Г2С (-)  ", 500, 350, 170, 120,  95, 200, 150, 120, 125,  90,  70, 100,  70,  55, 250, 180),
+new Steel("сталь 10ХСНД (-) ", 540, 400, 185, 140, 110, 220, 160, 135, 140, 100,  80, 110,  80,  65, 280, 210),
+new Steel("сталь 20Х (Н)    ", 600, 300, 190, 135, 105, 230, 165, 130, 140, 100,  75, 115,  85,  60, 280, 200),
+new Steel("сталь 20Х (У)    ", 700, 500, 240, 175, 140, 290, 220, 175, 180, 130, 100, 145, 100,  80, 360, 260),
+new Steel("сталь 20Х (М59)  ", 850, 630, 290, 210, 170, 350, 210, 145, 220, 155, 120, 175, 125,  95, 430, 320),
+new Steel("сталь 40Х (Н)    ", 630, 330, 200, 155, 125, 240, 190, 155, 150, 115,  90, 120,  95,  75, 300, 230),
+new Steel("сталь 40Х (У)    ", 800, 650, 270, 200, 160, 320, 250, 200, 200, 150, 115, 160, 115,  90, 400, 300),
+new Steel("сталь 40Х (М39)  ",1100, 900, 200, 155, 125, 450, 340, 270, 280, 200, 160, 230, 165, 130, 560, 420),
+new Steel("сталь 40Х (М48)  ",1300,1100, 440, 330, 260, 530, 410, 320, 330, 240, 190, 270, 195, 150, 670, 490)
+    };
+        #endregion
+
+        int i = 0, steelsListLength = 0; // подсчет циклов и длина списка сталей
+        int selectedSteel = 0; // выбранная марка стали
+        
+        panel choisePanel = panel.Stretch;  // ВЫБРАННАЯ ПАНЕЛЬ
+        load loadVid      = load.Static;    // ВЫБРАННЫЙ ВИД НАГРУЗКИ
+
+        string[] Tip = {"При растяжении ","При изгибе ","При кручении ","При срезе ","При смятии "};
+        string[] Vid = { "для статической нагрузки","для пульсирующей нагрузки",
+                         "для знакопеременной нагрузки" };
+
+        double actual_Stress_Max; // Доп. напр. при выбранном типе и виде нагрузки 
+        // завершение DATA!!!     
+   
+
+        // Конструктор class Form1
+        public Form1()
+        {
+            InitializeComponent();
+            // вначале - actual_Stress_Max = static_Stretch_Stress_Max
+            actual_Stress_Max = steels[selectedSteel].static_Stretch_Stress_Max;
+            steelsListLength = steels.GetLength(0); // определение длины массива структур
+            while (i < steelsListLength)            // инициализация listBox1
+            {   listBox1.Items.Add(steels[i].steelName);
+                i++;
+            }
+            listBox1.SelectedIndex = 0; // выделяем первую строку в listBox1            
+            label6.Text = "Не изменяющая свое значение";
+            view_Data_Of_Steel();
+            txtBox1();
+            txtBox2();
+            viewResult_Stretch();            
+        }   // завершение Конструктора class Form1
+        
+
+        //
+        // Обработчики событий (и др.методы...) в class Form1      
+        //
+
+        // textBox1_TextChanged
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            txtBox1();
+            textBox1.Select(textBox1.Text.Length, 0); // курсор в конец текста
+            txtBox2();
+            viewResult_Stretch();
+        }           // завершение textBox1_TextChanged
+
+
+        void txtBox1()
+        {
+            diametrStretch_str = textBox1.Text;
+            // если длина строки == 0
+            if (diametrStretch_str.Length == 0)
+                diametrStretch_dbl = 0;
+            else {
+                try { diametrStretch_dbl = Convert.ToDouble(diametrStretch_str); }
+                catch { MessageBox.Show("Недопустимый ввод", "Warning!",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox1.Text = "";
+                    diametrStretch_dbl = 0;
+                }  // завершение try...catch
+            }      // завершение if...else            
+            // Расчет площади сечения стержня
+            areaStretch_dbl = diametrStretch_dbl * diametrStretch_dbl * 0.7853981625;   // 3.14159265 / 4 = 0.7853981625 
+            areaStretch_str = dblToCutString(areaStretch_dbl) + " мм.кв.";
+            label16.Text = areaStretch_str;
+        }           // завершение txtBox1() 
+
+
+        //
+        // Изменение текста в окне "Нагрузка" (textBox2)
+        //
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            txtBox2();
+            viewResult_Stretch();
+        }           // завершение textBox2_TextChanged
+
+
+        void txtBox2()
+        {
+            forceStretch_str = textBox2.Text;
+            // если длина строки == 0
+            if (forceStretch_str.Length == 0) forceStretch_dbl = 0;
+            else {
+                try { forceStretch_dbl = Convert.ToDouble(forceStretch_str); }
+                catch { MessageBox.Show("Недопустимый ввод", "Warning!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox2.Text = "";
+                    forceStretch_dbl = 0;
+                }                   // завершение try...catch
+            }                       // завершение if...else
+            // Расчет напряжения в стержне
+            if (areaStretch_dbl == 0) {
+                stressStretch_dbl = 0;
+                stressStretch_str = "Sorry, no value";
+            }
+            else {
+                stressStretch_dbl = forceStretch_dbl / areaStretch_dbl;
+                stressStretch_str = dblToCutString(stressStretch_dbl) + " МПа";
+            }
+            label17.Text = stressStretch_str;            
+        }           // завершение txtBox2() 
+
+        
+        // List_Box1 - ВЫБОР СТАЛИ
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedSteel = listBox1.SelectedIndex;
+            set_actual_Stress_Max();
+        }     // завершение listBox1_SelectedIndexChanged()
+
+
+        /*********** ВЫБОР ВИДА НАГРУЗКИ ***********/
+        // radioButton1 - ВЫБОР ВИДА НАГРУЗКИ
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)  // СТАТИЧЕСКАЯ НАГРУЗКА
+            {
+                label6.Text = "Не изменяющая свое значение";
+                loadVid = load.Static;                                
+                set_actual_Stress_Max();
+            }   // завершение if
+        }       // завершение radioButton1_CheckedChanged()      
+
+        // radioButton2 - ВЫБОР ТИПА НАГРУЗКИ
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)   // ПУЛЬСИРУЮЩАЯ НАГРУЗКА
+            {
+                label6.Text = "Изменяющая значение от 0 до max.";
+                loadVid = load.Pulsate;                
+                set_actual_Stress_Max();
+            }   // завершение if
+        }       // завершение radioButton2_CheckedChanged()
+
+        // radioButton3 - ВЫБОР ТИПА НАГРУЗКИ
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton3.Checked == true)   // ЗНАКОПЕРЕМЕННАЯ НАГРУЗКА
+            {
+                label6.Text = "Знакопеременная (симметричная)";
+                loadVid = load.Alternate;                
+                set_actual_Stress_Max();
+            }   // завершение if
+        }       // завершение radioButton3_CheckedChanged()
+        /*********** завершение ВЫБОР ВИДА НАГРУЗКИ ***********/
+
+
+        // needForce() - при заданном юзером диаметре
+        void needForce()
+        {
+            // определен диаметр (и затем площадь сечения)
+            // определить допустимую силу для заданного напряжения
+            // НАПРЯЖЕНИЕ (МПа) = СИЛА (Н) / ПЛОЩАДЬ (мм.кв.)
+            // СИЛА (Н) = НАПРЯЖЕНИЕ (МПа) * ПЛОЩАДЬ (мм.кв.)
+            forceNeed_dbl = actual_Stress_Max * areaStretch_dbl;
+            forceNeed_str = dblToCutString(forceNeed_dbl) + " Н";
+            this.label10.Text = forceNeed_str;
+        }   // завершение forceNeed()
+
+
+        // needDiametr() - при заданной юзером силе
+        void needDiametr()
+        {
+            // определено напряжение при заданной силе и площади            
+            // НАПРЯЖЕНИЕ (МПа) = СИЛА (Н) / ПЛОЩАДЬ (мм.кв.)
+            // stress_dbl = force_dbl / area_dbl;
+            //***********************************
+            // определить площадь (и затем диаметр) требуемый для заданного максимально
+            // допустимого напряжения и заданной силы
+            // ПЛОЩАДЬ (мм.кв.) = СИЛА (Н) / НАПРЯЖЕНИЕ (МПа)
+            areaNeed_dbl = forceStretch_dbl / actual_Stress_Max;
+            // ПЛОЩАДЬ (мм.кв.) = (ДИАМЕТР (мм) В КВАДРАТЕ) * 0.7853981625
+            // (ДИАМЕТР (мм) В КВАДРАТЕ) = ПЛОЩАДЬ (мм.кв.) / 0.7853981625
+            // ДИАМЕТР (мм) = КОРЕНЬ КВАДРАТНЫЙ ИЗ (ПЛОЩАДЬ (мм.кв.) / 0.7853981625)
+            diametrNeed_dbl = Math.Sqrt(areaNeed_dbl / 0.7853981625);
+            diametrNeed_str = dblToCutString(diametrNeed_dbl) + " мм.";
+            this.label9.Text = diametrNeed_str;
+        }   // завершение diametrNeed()
+
+
+        // dblToCutString() - СДЕЛАТЬ В СТРОКЕ ДВА ЗНАКА ПОСЛЕ ЗАПЯТОЙ
+        string dblToCutString(double dbl)
+        {
+            string stringForCut;
+            int indexOfDivide, stringForCutLength, stringCuttedLength;
+
+            stringForCut = dbl.ToString();
+            stringForCutLength = stringForCut.Length;
+            indexOfDivide = stringForCut.IndexOf(Program.divide_true);
+            if (indexOfDivide != -1)
+            {
+                stringCuttedLength = indexOfDivide + 3;
+                if (stringForCutLength > stringCuttedLength)
+                { stringForCut = stringForCut.Remove(stringCuttedLength); }
+            }
+            return stringForCut;
+        }   // завершение dblToCutString()
+
+
+        //
+        //  кнопка "Решить"
+        //
+        private void button1_Click(object sender, EventArgs e)      // кнопка расчета
+        {
+            MessageBox.Show("Функция пока не реализована");            
+        }           // завершение button1_Click
+
+
+        //
+        //  кнопка "Exit"
+        //
+        private void button2_Click(object sender, EventArgs e)      // кнопка выхода
+        {
+            if (MessageBox.Show("Чета не понял - ВЫХОДИМ???", "Хрена-се...",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }       // завершение button2_Click
+
+
+        // переключение вкладки Tab
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {            
+            choisePanel = (panel)tabControl1.SelectedIndex;           
+            set_actual_Stress_Max();
+        }   // завершение tabControl1_SelectedIndexChanged()
+
+
+        void set_actual_Stress_Max()
+        {
+            switch (choisePanel)
+            {
+                case panel.Stretch:                    
+                    switch (loadVid)
+                    {
+                        case load.Static:
+                            actual_Stress_Max = steels[selectedSteel].static_Stretch_Stress_Max;
+                            break;
+                        case load.Pulsate:
+                            actual_Stress_Max = steels[selectedSteel].pulsate_Stretch_Stress_Max;
+                            break;
+                        case load.Alternate:
+                            actual_Stress_Max = steels[selectedSteel].alternate_Stretch_Stress_Max;
+                            break;
+                        default:
+                            break;
+                    };   // завершение switch()
+                    viewResult_Stretch();
+                    break;
+                case panel.Bend:                    
+                    switch (loadVid)
+                    {
+                        case load.Static:
+                            actual_Stress_Max = steels[selectedSteel].static_Bend_Stress_Max;
+                            break;
+                        case load.Pulsate:
+                            actual_Stress_Max = steels[selectedSteel].pulsate_Bend_Stress_Max;
+                            break;
+                        case load.Alternate:
+                            actual_Stress_Max = steels[selectedSteel].alternate_Bend_Stress_Max;
+                            break;
+                        default:
+                            break;
+                    };   // завершение switch()
+                    break;
+                case panel.Twist:                    
+                    switch (loadVid)
+                    {
+                        case load.Static:
+                            actual_Stress_Max = steels[selectedSteel].static_Twist_Stress_Max;
+                            break;
+                        case load.Pulsate:
+                            actual_Stress_Max = steels[selectedSteel].pulsate_Twist_Stress_Max;
+                            break;
+                        case load.Alternate:
+                            actual_Stress_Max = steels[selectedSteel].alternate_Twist_Stress_Max;
+                            break;
+                        default:
+                            break;
+                    };   // завершение switch()
+                    break;
+                case panel.Cut:                    
+                    switch (loadVid)
+                    {
+                        case load.Static:
+                            actual_Stress_Max = steels[selectedSteel].static_Cut_Stress_Max;
+                            break;
+                        case load.Pulsate:
+                            actual_Stress_Max = steels[selectedSteel].pulsate_Cut_Stress_Max;
+                            break;
+                        case load.Alternate:
+                            actual_Stress_Max = steels[selectedSteel].alternate_Cut_Stress_Max;
+                            break;
+                        default:
+                            break;
+                    };   // завершение switch()
+                    break;
+                case panel.Crush:                    
+                    switch (loadVid)
+                    {
+                        case load.Static:
+                            actual_Stress_Max = steels[selectedSteel].static_Crush_Stress_Max;
+                            break;
+                        case load.Pulsate:
+                            actual_Stress_Max = steels[selectedSteel].pulsate_Crush_Stress_Max;
+                            break;
+                        case load.Alternate:                        // т.к. нет Crush
+                            actual_Stress_Max = steels[selectedSteel].alternate_Cut_Stress_Max; 
+                            break;
+                        default:
+                            break;
+                    };   // завершение switch()
+                    break;
+                default:
+                    break;
+            };  // завершение switch(choisePanel)
+            view_Data_Of_Steel();            
+        }       // завершение set_actual_Stress_Max()
+
+
+        // view_Data_Of_Steel()
+        void view_Data_Of_Steel()
+        {
+            label5.Text = "Марка стали - " + steels[selectedSteel].steelName
++ "\nВременное сопротивление - " + Convert.ToString(steels[selectedSteel].ultimate_Strength) + " МПа"
++ "\nПредел текучести - " + Convert.ToString(steels[selectedSteel].yield_Strength) + " МПа"
++ "\n" + Tip[(int)choisePanel] + Vid[(int)loadVid]
++ "\nдопустимое напряжение  -  " + Convert.ToString(actual_Stress_Max) + " МПа";
+        }   // завершение view_Data_Of_Steel()
+
+
+        // viewResult()
+        void viewResult_Stretch()
+        {
+            double difference = 0, persent = 0;
+
+            persent = stressStretch_dbl * 100 / actual_Stress_Max;
+            needDiametr();
+            needForce();
+            if ((persent > 1000) || (persent == 0))
+            {
+                if (persent > 1000) {
+                    label7.Text = "\n     Hey, slowdown!";
+                    label7.BackColor = Color.Red; }
+                if (persent == 0) {
+                    label7.Text = "\n     Sorry, no value";
+                    label7.BackColor = Color.Azure; }
+            }
+            else {
+                if (stressStretch_dbl > actual_Stress_Max)
+                {
+                    difference = stressStretch_dbl - actual_Stress_Max;
+                    label7.Text = "Напряжение " + dblToCutString(stressStretch_dbl)
+                        + " МПа больше\nдопустимого значения "
+                        + actual_Stress_Max + " МПа\nна "
+                        + dblToCutString(difference) + " МПа\n( это "
+                        + dblToCutString(persent) + " % допустимого)";
+                    label7.BackColor = Color.LightPink;
+                }
+                else {
+                    difference = actual_Stress_Max - stressStretch_dbl;
+                    label7.Text = "Напряжение " + dblToCutString(stressStretch_dbl)
+                        + " МПа меньше\nдопустимого значения " 
+                        + actual_Stress_Max + " МПа\nна "
+                        + dblToCutString(difference) + " МПа\n( это "
+                        + dblToCutString(persent) + " % допустимого)";
+                    label7.BackColor = Color.LightGreen;
+                }   // завершение if...else
+            }       // завершение if...else
+            // завершение viewResult()
+        }
+
+        //
+        // Обработчики событий в class Form1 - Panel Twist     
+        //
+        // textBox3 - ввод наружного диаметра на панели кручение
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            txtBox3();
+            textBox3.Select(textBox3.Text.Length, 0); // курсор в конец текста
+            //txtBox4();
+            //viewResult_Twist();
+            //    MessageBox.Show("Twisted");
+        }   // завершение textBox3_TextChanged()
+
+
+        // textBox5 - ввод крутящего момента на панели кручение
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            txtBox5();  // находится в файле Twist.cs
+            textBox5.Select(textBox5.Text.Length, 0); // курсор в конец текста
+        }   // завершение textBox5_TextChanged()       
+
+
+    }       // завершение partial class Form1
+}           // завершение namespace wf472
